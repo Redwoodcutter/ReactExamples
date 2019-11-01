@@ -4,10 +4,13 @@ import { Home } from './Home';
 import { About } from './About';
 import { Contact } from './Contact';
 import { NoMatch } from './NoMatch';
+import { Layout } from './components/Layout';
+
 
 function App() {
   return (
     <React.Fragment>
+      <Layout>
       <Router>
       <Switch>
             <Route exact path="/" component={Home} />
@@ -16,6 +19,7 @@ function App() {
             <Route component={NoMatch} />
       </Switch>
       </Router>
+      </Layout> 
     </React.Fragment>
   );
 }
